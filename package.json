@@ -19,13 +19,17 @@
     "grunt-sails-linker": "~0.10.1",
     "grunt-sync": "0.5.2",
     "include-all": "^1.0.0",
+    "nodemon": "^1.12.1",
     "rc": "1.0.1",
+    "redis": "^2.8.0",
     "sails": "~0.12.13",
-    "sails-disk": "~0.10.9"
+    "sails-disk": "~0.10.9",
+    "sails-mongo": "^0.12.2"
   },
   "scripts": {
     "debug": "node debug app.js",
-    "start": "node app.js"
+    "start": "node app.js",
+    "dev": "nodemon app.js --config=nodemon.json --models.migrate='alter'"
   },
   "main": "app.js",
   "repository": {
